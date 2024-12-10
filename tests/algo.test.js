@@ -188,6 +188,19 @@ describe("Algos Tests", () => {
 			args: [["1:0", "2:2", "3:1", "0:0", "1:3"]],
 			expected: 8,
 		},
+		{
+			func: algos.fibonacci,
+			name: "fibonacci",
+			args: [2, 4, 6, 8],
+			expected:
+				[
+					[ 0, 1 ],
+					[ 0, 1, 1, 2 ],
+					[ 0, 1, 1, 2, 3, 5 ],
+					[ 0, 1, 1,  2, 3, 5, 8, 13 ],
+					[ 0, 1,  1,  2,  3, 5, 8, 13, 21, 34]
+				],
+		},
 	];
 
 	for (const { func, name, args, expected } of testCases) {
